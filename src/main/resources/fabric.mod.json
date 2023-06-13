@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "no-bats",
+  "version": "${version}",
+  "name": "No Bats",
+  "description": "Disable bats natural spawning",
+  "authors": [
+    "billy4479"
+  ],
+  "contact": {
+    "sources": "https://github.com/billy4479/no-bats"
+  },
+  "license": "MIT",
+  "icon": "assets/no-bats/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "online.polpetta.nobats.NoBats"
+    ]
+  },
+  "mixins": [
+    "no-bats.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.19",
+    "minecraft": "~1.19.4",
+    "java": ">=17"
+  }
+}
