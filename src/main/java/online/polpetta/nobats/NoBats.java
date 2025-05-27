@@ -24,11 +24,10 @@ public class NoBats implements ModInitializer {
     // However, some things (like resources) may still be uninitialized.
     // Proceed with mild caution.
 
-    BiomeModifications.create(new Identifier(MOD_ID))
+    BiomeModifications.create(Identifier.of("online.polpetta", MOD_ID))
         .add(ModificationPhase.REMOVALS, BiomeSelectors.all(),
-             (context
-              -> context.getSpawnSettings().removeSpawnsOfEntityType(
-                  EntityType.BAT)));
+            (context -> context.getSpawnSettings().removeSpawnsOfEntityType(
+                EntityType.BAT)));
 
     LOGGER.info("[NoBats] Bats will no longer spawn");
   }
